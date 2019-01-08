@@ -25,5 +25,12 @@ void plan_delete(TourPlan *plan){
  * (hint: look at the test case to understand the calculation)
  */
 int plan_calc_presents(double goodness){
-  return 0;
+  int presents = 10 * goodness - 5;
+  if (presents < 0) {
+    presents = 0;
+  }
+  else if (presents > 5) {
+    presents = 5;
+  }
+  return presents;
 }
